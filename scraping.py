@@ -2,7 +2,6 @@ import pandas as pd
 from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
 
-BASE_DIR = os.path.dirname(__file__)
 
 hdr = {'User-Agent': 'Mozilla/5.0'}
 
@@ -11,7 +10,7 @@ ids =[]
 animes =[]
 
 
-for j in range(1,3):
+for j in range(1,53):
     link = 'https://www.anime-planet.com/users/recent_user_reviews.php?page=' + str(j)
     req = Request(link,headers=hdr)
     page = urlopen(req).read()
